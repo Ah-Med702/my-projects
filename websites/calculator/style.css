@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(10, 10, 10);
+}
+
+.formstyle {
+    width: 250px;
+    margin: 100px auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.4s;
+}
+
+#answer {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: right;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}
+
+#answer:focus {
+    outline-color: #f9c7c7;
+}
+
+#keys {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.4s;
+}
+
+#keys input {
+    width: 25%;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    transition: 0.4s;
+}
+
+#keys input:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#keys input:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#keys input.operator {
+    background-color: #f9c7c7;
+
+}
+
+input#equal.operator {
+    width: 50%;
+    background-color: #ffa8a8;
+}
+
+input#c.operator {
+    background-color: #ffa8a8;
+}
+
+input#open-bow.operator {
+    width: 12.5%;
+}
+
+input#close-bow.operator {
+    width: 12.5%;
+}
+
+h4 {
+    width: 75px;
+    padding: 0;
+    margin: 0;
+    transition: 0.4s;
+}
+
+span {
+    color: #ff6868;
+    transition: 0.4s;
+}
+
+h4:hover {
+    transform: translateY(-5px);
+}

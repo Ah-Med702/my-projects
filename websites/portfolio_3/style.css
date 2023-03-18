@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sono', sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Style for the nav links */
+.navbar ul {
+    display: flex;
+    list-style: none;
+
+}
+
+.navbar li {
+    margin-right: 10px;
+}
+
+.navbar li a {
+    color: black;
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar li a:hover,
+.active {
+    color: white;
+    background-color: #fe5b02;
+
+
+}
+
+/* Style for the logo */
+.navbar-brand img {
+    height: 60px;
+}
+
+/* Style for the Contact button */
+.nav-btn {
+    width: fit-content;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 15px;
+    font-size: 16px;
+    background-color: #241f21;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-btn:hover {
+    background-color: #fe8e3e;
+    color: white;
+}
+
+.nav-btn a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+        font-family: 'Sono', sans-serif;
+}
+
+@media only screen and (max-width: 320px) {}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .navbar {
+        margin: 0;
+    }
+
+    .navbar li {
+        margin-right: 0;
+    }
+
+    .navbar li a {
+        padding: 3px 7px;
+        font-size: 12px;
+    }
+
+    .navbar-brand img {
+        height: 30px;
+        width: 50px;
+        margin-top: 10px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+    .navbar li {
+        margin-right: 0;
+    }
+
+    .navbar li a {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+        width: 70px;
+    }
+
+    .nav-btn {
+        width: fit-content;
+        border-radius: 50px;
+        padding: 6px 15px;
+        font-size: 16px;
+    }
+}
+
+/* =====================================================================================================
+========================================================================================================
+======================================================================================================== */
+
+.home {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.square {
+    width: 900px;
+    height: 250px;
+    width: 70%;
+    height: 40.5%;
+    border-radius: 900px;
+    background-color: #fe5b02;
+    position: absolute;
+    right: -200px;
+    top: 100px;
+    transform: rotate(-25deg);
+}
+
+.square img {
+    position: absolute;
+    top: -91px;
+    left: 8px;
+    transform: rotate(25deg);
+    width: 232px;
+    clip-path: ellipse(64% 37% at 56% 42%);
+}
+
+/* .experience_square {
+    background-color: #241f21;
+    color: white;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 23%;
+}
+
+.experience_square span {
+    font-weight: bold;
+    font-size: 24px;
+} */
+
+.home .content {
+    position: absolute;
+    height: 80%;
+    margin-top: 40px;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content .top {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .top .one {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.content .top .one span {
+    font-weight: bolder;
+}
+
+.content .top .hire_me {
+    margin-top: 20px;
+    padding: 10px;
+    width: 120px;
+    background-color: #fe5b02;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.content .top .hire_me a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.content .top .hire_me:hover {
+    background-color: #241f21;
+    color: white;
+    cursor: pointer;
+}
+
+.languages {
+    display: flex;
+}
+
+.js,
+.py,
+.c {
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.js {
+    background-color: #fe8e3e;
+    color: black;
+}
+
+.py {
+    background-color: #fb6800;
+    color: white;
+}
+
+.c {
+    background-color: #241f21;
+    color: white;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .home {
+        width: 100%;
+    }
+
+    .square {
+        width: 900px;
+        height: 120px;
+        top: 25%;
+        left: 40%;
+        transform: rotate(-30deg);
+    }
+
+    .square img {
+        transform: rotate(31deg);
+        width: 150px;
+        top: -107px;
+        left: -6px;
+        clip-path: ellipse(59% 46% at 53% 31%);
+    }
+
+    .home .content {
+        margin-left: 10%;
+        margin-top: 60px;
+        width: 100%;
+    }
+
+    .content .top {
+        width: 45%;
+        margin-top: 5%;
+    }
+
+    .content .top .one {
+        font-size: 25px;
+    }
+
+    .content .top .two {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    .languages {
+        width: 40%;
+        margin-top: 30%;
+    }
+
+    .js,
+    .py,
+    .c {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .square {
+        width: 900px;
+        height: 150px;
+        top: 15%;
+        left: 40%;
+        transform: rotate(-30deg);
+    }
+
+    .square img {
+        transform: rotate(30deg);
+        width: 180px;
+        top: -119px;
+        left: 0;
+        clip-path: ellipse(59% 46% at 49% 32%);
+    }
+
+    .home .content {
+        margin-left: 10%;
+        margin-top: 15%;
+        width: 100%;
+    }
+
+    .content .top {
+        width: 40%;
+    }
+
+    .content .top .one {
+        font-size: 40px;
+    }
+
+    .content .top .two {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+
+    .js,
+    .py,
+    .c {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .square {
+        width: 900px;
+        height: 200px;
+        top: 15%;
+        left: 40%;
+        transform: rotate(-30deg);
+    }
+
+    .square img {
+        transform: rotate(30deg);
+        width: 220px;
+        top: -135px;
+        left: -2px;
+        clip-path: ellipse(59% 46% at 52% 32%);
+    }
+
+    .home .content {
+        margin-left: 10%;
+        margin-top: 10%;
+        width: 100%;
+    }
+
+    .content .top {
+        width: 40%;
+    }
+
+    .content .top .one {
+        font-size: 40px;
+    }
+
+    .content .top .two {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+
+    .js,
+    .py,
+    .c {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 992px) {
+    .content .top {
+        width: 35%;
+    }
+}
+
+
+/* =====================================================================================================
+========================================================================================================
+======================================================================================================== */
+/* 
+.projects {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.projects h1 {
+    margin-left: 120px;
+}
+
+.projects .content {
+    position: relative;
+    margin: 10px 120px;
+    height: 500px;
+}
+
+
+.projects .content .one {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 20px;
+    overflow: hidden;
+    background-color: #241f21;
+    position: absolute;
+}
+
+.projects .content img {
+    width: 390px;
+    position: absolute;
+    left: -20px;
+    top: -5px;
+}
+
+.projects .content .one_one {
+    background-color: #241f21;
+    width: 50px;
+    height: 50px;
+    color: white;
+    position: absolute;
+    left: 26%;
+    top: 36%;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.projects .content .two {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 20px;
+    overflow: hidden;
+    background-color: #241f21;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -60%);
+}
+
+.projects .content .two_two {
+    background-color: #241f21;
+    width: 50px;
+    height: 50px;
+    color: white;
+    position: absolute;
+    left: 61%;
+    top: 62%;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.projects .content .three {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 20px;
+    overflow: hidden;
+    background-color: #241f21;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.projects .content .three_three {
+    background-color: #241f21;
+    width: 50px;
+    height: 50px;
+    color: white;
+    position: absolute;
+    left: 95%;
+    top: 88%;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 320px) {}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* Add your CSS styles here */
+/* } 
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    /* Add your CSS styles here */
+/* } */
+
+/* @media screen and (min-width: 768px) and (max-width: 992px) { */
+/* Add your CSS styles here */
+/* }
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    /* Add your CSS styles here */
+
+
+/* =====================================================================================================
+========================================================================================================
+======================================================================================================== */

@@ -1,0 +1,282 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+    margin: 0;
+}
+
+.header h1 {
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.header h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 38px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg,
+            rgba(84, 58, 183, 1) 0%,
+            rgba(0, 172, 193, 1) 100%);
+    color: white;
+}
+
+.header .fa-nutritionix {
+    width: 50px;
+    fill: white;
+    padding-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inner-header {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    /*Flexbox for containers*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* ===================================================================== */
+
+.space {
+    height: 200px;
+    width: 100%;
+}
+
+/* ===================================================================== */
+
+.websites {
+    width: 90%;
+    min-height: 100vh;
+    padding: 0 4rem;
+}
+
+.websites .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.websites .container h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 48px;
+    color: #000;
+    width: 100%;
+    text-align: center;
+}
+
+.websites .container .div {
+    width: 23rem;
+    height: 10rem;
+    margin: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    position: relative;
+    bottom: 1.9rem;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    text-align: center;
+    position: relative;
+    top: -85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.websites .container .div:hover img {
+    opacity: 0.3;
+}
+
+.websites .container .div:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #1194bf;
+    color: white;
+    padding: 1rem 2rem;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ===================================================================== */
+
+
+/*Shrinking for mobile*/
+@media only screen and (min-width:481px) and (max-width:768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header h3 {
+        font-size: 20px;
+        margin-bottom: 100px;
+    }
+
+    #details {
+        width: 500px;
+        font-size: 22px;
+    }
+
+    /* ===================================== */
+
+    .websites {
+        padding: 1rem;
+    }
+
+    .websites .container h1 {
+        font-weight: 400;
+        font-size: 32px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+
+    .content {
+        height: 30vh;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .header h3 {
+        font-size: 16px;
+        margin-bottom: 120px;
+    }
+
+    /* ===================================== */
+
+    .websites {
+        padding: 1rem;
+    }
+
+    .websites .container h1 {
+        font-weight: 400;
+        font-size: 26px;
+    }
+
+    .websites .container .div {
+        width: 18rem;
+        height: 8rem;
+        border-radius: 10px;
+    }
+
+    img {
+        bottom: 1.4rem;
+    }
+
+    .middle {
+        top: -80%;
+    }
+
+    .text {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
