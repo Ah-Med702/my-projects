@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* button {
+    background: #343a40 !important;
+}
+
+button:hover {
+    background: #292e33 !important;
+} */
+
+input {
+    height: 40px;
+}
+
+#total {
+    background: #600;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+
+#total::before {
+    content: 'total: ';
+}
+
+td {
+    text-align: center;
+}
+
+#deleteAllBtn {
+    display: none;
+}
+
+#scrollBtn {
+    right: 20px;
+    bottom: 20px;
+    display: none;
+}
+
+#colorModeBtn {
+    top: 20px;
+    right: 20px;
+    width: 42px !important;
+    height: 38px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sun{
+    display: none;
+}

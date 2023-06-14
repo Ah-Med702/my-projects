@@ -1,34 +1,35 @@
+let playBtn = document.getElementById("playBtn");
+playBtn.onclick = play;
+
 function play() {
-    const choices = [
+    let choice = [
         { name: "Scissors", src: "images/image3.jpg" },
         { name: "Paper", src: "images/image1.jpg" },
-        { name: "Rock", src: "images/image2.jpg" }
+        { name: "Rock", src: "images/image2.jpg" },
     ];
-    const randomIndex1 = Math.floor(Math.random() * choices.length);
-    const randomIndex2 = Math.floor(Math.random() * choices.length);
-    const choice1 = choices[randomIndex1];
-    const choice2 = choices[randomIndex2];
 
-    const resultDiv = document.querySelector("#result");
-    resultDiv.innerHTML = "";
+    let randomIndex1 = Math.floor(Math.random() * choice.length);
+    let randomIndex2 = Math.floor(Math.random() * choice.length);
 
-    const img1 = document.createElement("img");
-    img1.classList.add("choice");
+    let choice1 = choice[randomIndex1];
+    let choice2 = choice[randomIndex2];
+
+    let place1 = document.querySelector(".player1")
+    let place2 = document.querySelector(".player2")
+
+    let img1 = document.createElement("img");
     img1.src = choice1.src;
-    resultDiv.appendChild(img1);
+    place1.appendChild(img1)
 
-    const img2 = document.createElement("img");
-    img2.classList.add("choice");
+    let img2 = document.createElement("img");
     img2.src = choice2.src;
-    resultDiv.appendChild(img2);
-    
-    const p1 = document.createElement("p");
-    p1.innerHTML = "Player 1: " + choice1.name;
-    p1.classList.add("player");
-    resultDiv.appendChild(p1);
+    place2.appendChild(img2);
 
-    const p2 = document.createElement("p");
-    p2.innerHTML = "Player 2: " + choice2.name;
-    p2.classList.add("player");
-    resultDiv.appendChild(p2);
+    let p1 = document.createElement("p");
+    p1.innerHTML = `player 1 : ${choice1.name}`;
+    place1.appendChild(p1)
+
+    let p2 = document.createElement("p");
+    p2.innerHTML = `player 2 : ${choice2.name}`;
+    place2.appendChild(p2);
 }
