@@ -1,39 +1,41 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Sono', sans-serif;
+
 }
 
-body {
-    font-family: 'Sono', sans-serif;
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
 
 .navbar {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    padding: 10px;
     z-index: 10;
 }
 
-/* Style for the nav links */
 .navbar ul {
     display: flex;
     list-style: none;
-
 }
 
 .navbar li {
-    margin-right: 10px;
+    padding: 6px;
 }
 
 .navbar li a {
     color: black;
-    text-decoration: none;
-    padding: 6px 15px;
+    padding: 6px 12px;
     border-radius: 20px;
+    font-size: 18px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -41,41 +43,27 @@ body {
 .active {
     color: white;
     background-color: #fe5b02;
-
-
+    border-radius: 20px;
 }
 
-/* Style for the logo */
 .navbar-brand img {
-    height: 60px;
+    height: 40px;
 }
 
-/* Style for the Contact button */
 .nav-btn {
-    width: fit-content;
     border: none;
-    border-radius: 50px;
-    padding: 6px 15px;
-    font-size: 16px;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 18px;
     background-color: #241f21;
-    color: #fff;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 .nav-btn:hover {
     background-color: #fe8e3e;
-    color: white;
 }
 
-.nav-btn a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-        font-family: 'Sono', sans-serif;
-}
-
-/* @media only screen and (max-width: 320px) {} */
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .navbar {
@@ -119,81 +107,58 @@ body {
     }
 
     .nav-btn {
-        width: fit-content;
-        border-radius: 50px;
-        padding: 6px 15px;
-        font-size: 16px;
+        display: none;
     }
 }
 
-/* =====================================================================================================
-========================================================================================================
-======================================================================================================== */
 
 .home {
     height: 100vh;
     width: 100%;
-    position: relative;
     overflow: hidden;
 }
 
 .square {
-    width: 900px;
     height: 250px;
-    width: 70%;
-    height: 40.5%;
-    border-radius: 900px;
+    width: 1000px;
+    border-radius: 500px;
     background-color: #fe5b02;
-    position: absolute;
-    right: -200px;
+    position: relative;
+    right: -600px;
     top: 100px;
     transform: rotate(-25deg);
 }
 
+.square-2 {
+    position: absolute;
+    width: 115px;
+    height: 50px;
+    background-color: #fff;
+    bottom: -50px;
+    left: 50px;
+}
+
 .square img {
     position: absolute;
-    top: -120px;
-    left: 4px;
-    transform: rotate(28deg);
-    width: 232px;
-    clip-path: ellipse(63% 37% at 56% 42%);
+    bottom: -110px;
+    left: -18px;
+    transform: rotate(25deg);
+    width: 250px;
+    clip-path: ellipse(68% 43% at 66% 35%);
 }
-
-/* .experience_square {
-    background-color: #241f21;
-    color: white;
-    width: fit-content;
-    border-radius: 10px;
-    padding: 15px;
-    position: absolute;
-    top: 50%;
-    left: 23%;
-}
-
-.experience_square span {
-    font-weight: bold;
-    font-size: 24px;
-} */
 
 .home .content {
-    position: absolute;
-    height: 80%;
-    margin-top: 40px;
-    margin-left: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    padding-left: 135px;
 }
 
 .content .top {
     width: 340px;
-    display: flex;
-    flex-direction: column;
+    margin-top: -80px;
+    margin-bottom: 40px;
 }
 
 .content .top .one {
     font-size: 50px;
-    margin-bottom: 20px;
 }
 
 .content .top .one span {
@@ -207,20 +172,13 @@ body {
     background-color: #fe5b02;
     border: none;
     border-radius: 20px;
-    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
     transition: 0.2s;
-}
-
-.content .top .hire_me a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
 }
 
 .content .top .hire_me:hover {
     background-color: #241f21;
-    color: white;
-    cursor: pointer;
 }
 
 .languages {
@@ -230,27 +188,25 @@ body {
 .js,
 .py,
 .c {
-    width: 100px;
     margin-right: 10px;
     text-align: center;
-    padding: 10px;
+    padding: 8px 12px;
     border-radius: 20px;
     font-weight: bold;
+    color: #fff;
 }
 
 .js {
     background-color: #fe8e3e;
-    color: black;
+    color: #000;
 }
 
 .py {
     background-color: #fb6800;
-    color: white;
 }
 
 .c {
     background-color: #241f21;
-    color: white;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -266,6 +222,10 @@ body {
         transform: rotate(-30deg);
     }
 
+    .square-2{
+        display: none;
+    }
+
     .square img {
         transform: rotate(31deg);
         width: 150px;
@@ -275,9 +235,7 @@ body {
     }
 
     .home .content {
-        margin-left: 10%;
-        margin-top: 60px;
-        width: 100%;
+        padding-left: 50px;
     }
 
     .content .top {
@@ -311,26 +269,32 @@ body {
         width: 900px;
         height: 150px;
         top: 15%;
-        left: 40%;
+        left: 50%;
         transform: rotate(-30deg);
+    }
+
+    .square-2 {
+        left: 10px;
     }
 
     .square img {
         transform: rotate(30deg);
         width: 180px;
         top: -119px;
-        left: 0;
+        left: 2px;
         clip-path: ellipse(59% 46% at 49% 32%);
     }
 
     .home .content {
-        margin-left: 10%;
-        margin-top: 15%;
-        width: 100%;
+        padding-left: 70px;
     }
 
     .content .top {
         width: 40%;
+        margin-top: -30px;
+        margin-bottom: 40px;
+
+
     }
 
     .content .top .one {
@@ -355,7 +319,7 @@ body {
         width: 900px;
         height: 200px;
         top: 15%;
-        left: 40%;
+        left: 50%;
         transform: rotate(-30deg);
     }
 
@@ -368,13 +332,14 @@ body {
     }
 
     .home .content {
-        margin-left: 10%;
-        margin-top: 10%;
-        width: 100%;
+        padding-left: 75px;
     }
 
     .content .top {
         width: 40%;
+        margin-top: -40px;
+        margin-bottom: 40px;
+
     }
 
     .content .top .one {
@@ -383,7 +348,6 @@ body {
 
     .content .top .two {
         font-size: 18px;
-        margin-bottom: 20px;
     }
 
 
@@ -393,146 +357,3 @@ body {
         font-size: 16px;
     }
 }
-
-@media screen and (min-width: 800px) and (max-width: 992px) {
-    .content .top {
-        width: 35%;
-    }
-}
-
-
-/* =====================================================================================================
-========================================================================================================
-======================================================================================================== */
-/* 
-.projects {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-}
-
-.projects h1 {
-    margin-left: 120px;
-}
-
-.projects .content {
-    position: relative;
-    margin: 10px 120px;
-    height: 500px;
-}
-
-
-.projects .content .one {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    margin: 20px;
-    overflow: hidden;
-    background-color: #241f21;
-    position: absolute;
-}
-
-.projects .content img {
-    width: 390px;
-    position: absolute;
-    left: -20px;
-    top: -5px;
-}
-
-.projects .content .one_one {
-    background-color: #241f21;
-    width: 50px;
-    height: 50px;
-    color: white;
-    position: absolute;
-    left: 26%;
-    top: 36%;
-    border-radius: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.projects .content .two {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    margin: 20px;
-    overflow: hidden;
-    background-color: #241f21;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-55%, -60%);
-}
-
-.projects .content .two_two {
-    background-color: #241f21;
-    width: 50px;
-    height: 50px;
-    color: white;
-    position: absolute;
-    left: 61%;
-    top: 62%;
-    border-radius: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.projects .content .three {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    margin: 20px;
-    overflow: hidden;
-    background-color: #241f21;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.projects .content .three_three {
-    background-color: #241f21;
-    width: 50px;
-    height: 50px;
-    color: white;
-    position: absolute;
-    left: 95%;
-    top: 88%;
-    border-radius: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-@media only screen and (max-width: 320px) {}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    /* Add your CSS styles here */
-/* } 
-
-@media screen and (min-width: 480px) and (max-width: 768px) {
-    /* Add your CSS styles here */
-/* } */
-
-/* @media screen and (min-width: 768px) and (max-width: 992px) { */
-/* Add your CSS styles here */
-/* }
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-    /* Add your CSS styles here */
-
-
-/* =====================================================================================================
-========================================================================================================
-======================================================================================================== */
