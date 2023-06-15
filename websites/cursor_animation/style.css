@@ -9,6 +9,7 @@ body {
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #000000;
+    overflow: hidden;
 }
 
 nav {
@@ -57,16 +58,17 @@ nav li span {
 }
 
 .youtube {
-    background: linear-gradient(to right,#ff4e45 , #c00);
+    background: linear-gradient(to right, #ff4e45, #c00);
     color: #fff;
 }
 
 .whatsapp {
-    background: linear-gradient(to right, #1ba266,#25d366);
+    background: linear-gradient(to right, #1ba266, #25d366);
     color: #fff;
 }
+
 .facebook {
-    background: linear-gradient(to right, #2851A3,#1877F2);
+    background: linear-gradient(to right, #2851A3, #1877F2);
     color: #fff;
 }
 
@@ -124,4 +126,69 @@ nav li span {
 
 .grow-min {
     transform: scale(2);
+}
+
+@media only screen and (min-width: 601px) and (max-width: 680px) {
+    .inner {
+        display: none;
+    }
+
+    nav li span {
+        display: flex;
+        width: 35px;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+}
+
+@media only screen and (min-width: 470px) and (max-width: 600px) {
+    .inner {
+        display: none;
+    }
+
+    nav li span {
+        display: flex;
+        width: 35px;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .main .header {
+        font-size: 60px;
+    }
+
+    .main .header-min {
+        font-size: 40px;
+    }
+}
+
+@media  screen and (max-width: 470px){
+    .inner {
+            display: none;
+        }
+    
+        nav li span {
+            display: flex;
+            width: 35px;
+            height: 35px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    
+        .main .header {
+            font-size: 50px;
+        }
+    
+        .main .header-min {
+            font-size: 30px;
+        }
+
+        nav .logo{
+            font-size: 30px;
+        }
 }
