@@ -1068,7 +1068,7 @@ section>span::after {
     font-weight: bold;
 }
 
-.how-it-works-cont .right .work p{
+.how-it-works-cont .right .work p {
     color: var(--p-color);
 }
 
@@ -1091,6 +1091,295 @@ section>span::after {
     height: 100%;
     opacity: 0.1;
 }
+
+
+/* ========================================================================================================================================= */
+
+.latest-events {
+    overflow: hidden;
+}
+
+.latest-events-cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 100vh;
+}
+
+.latest-events-cont .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest-events-cont .top .image {
+    width: 40%;
+    position: relative;
+}
+
+.latest-events-cont .top .image img {
+    width: 98%;
+}
+
+.latest-events-cont .top .image img.dot-2 {
+    width: 45%;
+    position: absolute;
+    left: -105px;
+    bottom: -110px;
+}
+
+.latest-events-cont .top .right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.latest-events-cont .top .right .top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.latest-events-cont .top .right .top img.dot-1 {
+    position: absolute;
+    top: -80px;
+    right: -280px;
+}
+
+.latest-events-cont .top .right .top .latest-events-box {
+    height: 150px;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+.latest-events-cont .top .right .top .latest-events-box .num {
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.latest-events-cont .top .right .top .latest-events-box .last {
+    border-top: 1px solid #d4d4d4;
+    padding: 5px 10px;
+}
+
+.latest-events-cont .top .right .bottom {
+    height: 50px;
+    text-align: center;
+}
+
+.latest-events-cont .top .right .bottom h3 {
+    font-size: 30px;
+}
+
+.latest-events-cont .top .right .bottom p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--p-color);
+}
+
+.latest-events-cont>.bottom {
+    width: 100%;
+    text-align: center;
+    padding-block: 100px;
+}
+
+.latest-events-cont>.bottom .input-cont {
+    background-color: var(--third-color);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.latest-events-cont .bottom input[type="text"] {
+    width: 400px;
+    padding: 20px;
+    border-radius: 40px;
+    border: none;
+}
+
+.latest-events-cont .bottom input[type="text"]:focus {
+    outline: none;
+}
+
+.latest-events-cont .bottom span {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* ========================================================================================================================================= */
+
+.pricing-plans {
+    background-color: var(--third-color);
+}
+
+.pricing-plans-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    position: relative;
+}
+
+.pricing-plans-cont .pricing-plans-box {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 12px 20px 0 #00000021, 0 2px 4px 0 #0000001f;
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-plans-cont .pricing-plans-box::before {
+    content: '';
+    width: 0;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.pricing-plans-cont .pricing-plans-box::after {
+    content: '';
+    width: 0;
+    height: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.pricing-plans-cont .pricing-plans-box:hover::before,
+.pricing-plans-cont .pricing-plans-box:hover::after {width: 100%;}
+
+.pricing-plans-cont .pricing-plans-box.most-popular {
+    position: relative;
+    transform: translateY(-20px);
+}
+
+.pricing-plans-cont>.right,
+.pricing-plans-cont>.left {
+    position: absolute;
+}
+
+.pricing-plans-cont>.right {
+    top: -20px;
+    right: -80px;
+}
+
+.pricing-plans-cont>.left {
+    bottom: 80px;
+    left: -120px;
+}
+
+.pricing-plans-cont .pricing-plans-box .label {
+    content: 'Most Popular';
+    position: absolute;
+    right: -120px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 160px;
+    height: 40px;
+    padding-left: 5px;
+    transform-origin: 0% 0%;
+    transform: rotate(90deg);
+}
+
+.pricing-plans-cont .pricing-plans-box .label::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    border: 20px solid transparent;
+    border-right: 20px solid #fff;
+    transition: 0.3s;
+}
+
+.pricing-plans-cont .pricing-plans-box:hover .label::before{
+    border-right: 20px solid #f6f6f6;
+    /* transition-delay: 0.2s; */
+}
+
+.pricing-plans-cont .pricing-plans-box .top {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.pricing-plans-cont .pricing-plans-box .top .image img {
+    width: 40%;
+    margin-top: 20px;
+}
+
+.pricing-plans-cont .pricing-plans-box .top h1 {
+    font-size: 50px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.pricing-plans-cont .pricing-plans-box .mid {
+    width: 100%;
+    text-align: start;
+    padding-block: 20px;
+}
+
+.pricing-plans-cont .pricing-plans-box .mid>div {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.pricing-plans-cont .pricing-plans-box .mid .svg-inline--fa {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.pricing-plans-cont .pricing-plans-box .bottom {
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+}
+
+.pricing-plans-cont .pricing-plans-box .bottom span {
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pricing-plans-cont .pricing-plans-box .bottom span:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
 
 
 /* ========================================================================================================================================= */
