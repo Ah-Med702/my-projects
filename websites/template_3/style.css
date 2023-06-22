@@ -406,9 +406,10 @@ section>span::after {
 }
 
 @keyframes arrow-right {
-    0%{
+    0% {
         transform: translateX(-10px);
     }
+
     100% {
         transform: translateX(10px);
     }
@@ -691,7 +692,6 @@ section>span::after {
 }
 
 .testimonials-cont {
-    padding-block: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     column-gap: 50px;
@@ -731,6 +731,97 @@ section>span::after {
 
 .testimonial-card .filled {
     color: #ffc107;
+}
+
+/* ========================================================================================================================================= */
+
+.team-members-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.team-members-card {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+}
+
+.team-members-card::before{
+    content: '';
+    width: 80%;
+    height: 100%;
+    background-color: #f3f3f3;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.team-members-card::after {
+    content: '';
+    width: 0;
+    height: 100%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.team-members-card:hover::after{
+    width: 80%;
+}
+
+.team-members-card:hover .top .image img{
+    filter: grayscale(100%);
+}
+
+.team-members-card .top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team-members-card .top .image {
+    width: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.team-members-card .top .image img {
+    width: 100%;
+    transition: 0.2s;
+    transition-delay: 0.1s;
+}
+
+.team-members-card .top .social {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 15%;
+    height: 200px;
+}
+
+.team-members-card .top .social .svg-inline--fa{
+    color: #777;
+    height: 20px;
+}
+
+.team-members-card .top .social .svg-inline--fa:hover{
+    color: var(--primary-color);
+}
+
+.team-members-card .bottom {
+    margin: 20px auto;
+}
+
+.team-members-card .bottom h2 {
+    color: var(--primary-color);
 }
 
 /* ========================================================================================================================================= */
