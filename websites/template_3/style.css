@@ -11,6 +11,7 @@
     --primary-color: #2196f3;
     --secondary-color: #e4e4e4;
     --third-color: #ececec;
+    --p-color: #777;
 }
 
 body {
@@ -21,6 +22,20 @@ body {
     width: 85%;
     height: 100%;
     margin-inline: auto;
+}
+
+.landing-cont,
+.articles-cont,
+.gallery-cont,
+.features-cont,
+.testimonials-cont,
+.team-members-cont {
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+
+section {
+    padding-block: 50px;
 }
 
 a {
@@ -242,70 +257,60 @@ nav li>a {
 /* ========================================================================================================================================= */
 
 .articles {
-    min-height: 100vh;
     width: 100%;
-    padding-bottom: 100px;
-    position: relative;
 }
 
-.articles>span,
-.gallery>span,
-.features>span {
+section>span {
     display: inline-block;
-    width: 200px;
     margin: 0 auto 80px;
     border: 2px solid #000;
     position: relative;
-    top: 40px;
-    left: calc(50% - 100px);
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    padding: 10px 50px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: 700;
+    padding: 0 20px;
     cursor: pointer;
+    text-transform: uppercase;
     z-index: 1;
 }
 
-.articles>span:hover,
-.gallery>span:hover,
-.features>span:hover {
+section>span:hover {
     color: white;
     border: 2px solid white;
     transition-delay: 0.5s;
 }
 
-.articles>span:hover::before,
-.features>span:hover::before,
-.gallery>span:hover::before {
+section>span:hover::before {
 
     animation: move-left 0.5s linear forwards;
 }
 
-.articles>span:hover::after,
-.features>span:hover::after,
-.gallery>span:hover::after {
+
+section>span:hover::after {
     animation: move-right 0.5s linear forwards;
 }
 
 @keyframes move-left {
     50% {
-        transform: translateY(-50%) translateX(50px);
+        transform: translateY(-50%) translateX(30px);
         height: 20px;
         width: 20px;
         border-radius: 50%;
     }
 
     100% {
-        transform: translateY(-50%) translateX(50px);
+        transform: translateY(-50%) translateX(30px);
         height: 100%;
-        width: 50%;
+        width: 100%;
         border-radius: 0;
     }
 }
 
 @keyframes move-right {
     50% {
-        transform: translateY(-50%) translateX(-50px);
+        transform: translateY(-50%) translateX(-30px);
         height: 20px;
         width: 20px;
         border-radius: 50%;
@@ -313,23 +318,19 @@ nav li>a {
 
 
     100% {
-        transform: translateY(-50%) translateX(-50px);
+        transform: translateY(-50%) translateX(-30px);
         height: 100%;
-        width: 50%;
+        width: 100%;
         border-radius: 0;
     }
 
 }
 
-.articles>span::before,
-.articles>span::after,
-.features>span::before,
-.features>span::after,
-.gallery>span::before,
-.gallery>span::after {
+section>span::before,
+section>span::after {
     content: '';
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: var(--primary-color);
     position: absolute;
@@ -339,39 +340,39 @@ nav li>a {
     z-index: -1;
 }
 
-.articles>span::before,
-.features>span::before,
-.gallery>span::before {
-    left: -50px;
+section>span::before {
+    left: -30px;
 }
 
-.articles>span::after,
-.features>span::after,
-.gallery>span::after {
-    right: -50px;
+section>span::after {
+    right: -30px;
 }
 
 .articles-cont {
     padding-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 40px;
 }
 
 .card {
     border-radius: 10px;
     overflow: hidden;
     transition: 0.3s;
+    box-shadow: 0 0 5px #77777762;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px #777;
+    box-shadow: 0 0 20px var(--p-color);
+}
+
+.card:hover .info .fa-arrow-right {
+    animation: arrow-right 0.5s linear infinite;
 }
 
 .card .top {
     width: 100%;
-    margin-bottom: 10px;
 }
 
 .card .top img {
@@ -379,12 +380,12 @@ nav li>a {
 }
 
 .card .bottom {
-    padding: 20px;
+    padding: 5px 20px;
 }
 
 .card .bottom p {
-    line-height: 1.7;
-    color: #777;
+    line-height: 1.5;
+    color: var(--p-color);
 }
 
 .card .info {
@@ -404,12 +405,19 @@ nav li>a {
     color: var(--primary-color);
 }
 
+@keyframes arrow-right {
+    0%{
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+
 /* ========================================================================================================================================= */
 
 .gallery {
-    min-height: 100vh;
     width: 100%;
-    padding-bottom: 100px;
     background-color: var(--secondary-color);
     position: relative;
 }
@@ -487,11 +495,9 @@ nav li>a {
 
 .features {
     width: 100%;
-    min-height: 100vh;
 }
 
 .features-cont {
-    padding-top: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
@@ -511,12 +517,15 @@ nav li>a {
 .rectangle .image img {
     width: 100%;
 }
+
 .features-cont .red .image::before {
     background-color: #f43f36af;
 }
+
 .features-cont .green .image::before {
     background-color: #009687af;
 }
+
 .features-cont .blue .image::before {
     background-color: #03a9f4af;
 }
@@ -581,7 +590,7 @@ nav li>a {
     font-size: 20px;
     margin: 30px 0;
     padding: 25px;
-    color: #777;
+    color: var(--p-color);
 
 }
 
@@ -650,6 +659,7 @@ nav li>a {
 .rectangle:hover .image::after {
     clip-path: polygon(0 50%, 0% 100%, 100% 100%);
 }
+
 .rectangle:hover span a {
     color: #ffffff !important;
     transition-delay: 0.2s;
@@ -672,6 +682,55 @@ nav li>a {
         height: 75px;
         z-index: -1;
     }
+}
+
+/* ========================================================================================================================================= */
+
+.testimonials {
+    background-color: var(--third-color);
+}
+
+.testimonials-cont {
+    padding-block: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 50px;
+    row-gap: 25px;
+}
+
+.testimonial-card {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.testimonial-card .image {
+    position: absolute;
+    right: -10px;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--third-color);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.testimonial-card .image img {
+    width: 100%;
+}
+
+.testimonial-card p {
+    color: var(--p-color);
+}
+
+.testimonial-card .filled {
+    color: #ffc107;
 }
 
 /* ========================================================================================================================================= */
