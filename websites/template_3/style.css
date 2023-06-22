@@ -862,7 +862,7 @@ section>span::after {
     transition: 0.3s;
 }
 
-.services-card::before{
+.services-card::before {
     content: '';
     width: 0;
     height: 3px;
@@ -875,10 +875,11 @@ section>span::after {
 }
 
 
-.services-card:hover::before{
+.services-card:hover::before {
     width: 100%;
 }
-.services-card:hover{
+
+.services-card:hover {
     transform: translateY(-10px);
 }
 
@@ -923,77 +924,173 @@ section>span::after {
     left: 80px;
     transform: skew(-20deg);
 }
-.services-card .bottom a{
+
+.services-card .bottom a {
     padding-right: 20px;
     color: var(--primary-color);
 }
 
 /* ========================================================================================================================================= */
 
-.our-skills-cont{
+.our-skills-cont {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.our-skills-cont .image{
+
+.our-skills-cont .image {
     width: 50%;
     height: 100%;
 }
-.our-skills-cont .image img{
+
+.our-skills-cont .image img {
     width: 80%;
 }
-.our-skills-cont .skills{
+
+.our-skills-cont .skills {
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-.our-skills-cont .skills .top{
+
+.our-skills-cont .skills .top {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
 }
-.our-skills-cont .skills .top .title{
+
+.our-skills-cont .skills .top .title {
     font-size: 20px;
     font-weight: bold;
 }
-.our-skills-cont .skills .top .percentage{
+
+.our-skills-cont .skills .top .percentage {
     color: var(--primary-color);
     padding: 0 5px;
     border: 1px solid var(--primary-color);
     border-radius: 2px;
     font-weight: bold;
 }
-.our-skills-cont .skills .line{
+
+.our-skills-cont .skills .line {
     width: 100%;
     height: 40px;
     background-color: var(--third-color);
     position: relative;
 }
-.our-skills-cont .skills .line::before{
+
+.our-skills-cont .skills .line::before {
     content: '';
     height: 100%;
     background-color: var(--primary-color);
     position: absolute;
 }
 
-.our-skills-cont .skills .html .line::before{
+.our-skills-cont .skills .html .line::before {
     width: 80%;
 }
-.our-skills-cont .skills .css .line::before{
+
+.our-skills-cont .skills .css .line::before {
     width: 85%;
 }
-.our-skills-cont .skills .javascript .line::before{
+
+.our-skills-cont .skills .javascript .line::before {
     width: 70%;
 }
-.our-skills-cont .skills .python .line::before{
+
+.our-skills-cont .skills .python .line::before {
     width: 80%;
 }
 
 /* ========================================================================================================================================= */
 
+.how-it-works {
+    background-color: var(--third-color);
+}
+
+.how-it-works-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.how-it-works-cont .image {
+    width: 50%;
+    height: 100%;
+}
+
+.how-it-works-cont .image img {
+    width: 80%;
+}
+
+.how-it-works-cont .right {
+    width: 50%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+}
+
+.how-it-works-cont .right .work {
+    display: flex;
+    align-items: center;
+    background-color: #f6f5f5;
+    justify-content: space-between;
+    padding: 30px;
+    border: 2px solid white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.how-it-works-cont .right .work .icon {
+    width: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.how-it-works-cont .right .work .icon img {
+    width: 100%;
+}
+
+.how-it-works-cont .right .work .txt {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.how-it-works-cont .right .work h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.how-it-works-cont .right .work p{
+    color: var(--p-color);
+}
+
+.how-it-works-cont .right .work::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--p-color);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.how-it-works-cont .right .work:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
 
 
 /* ========================================================================================================================================= */
