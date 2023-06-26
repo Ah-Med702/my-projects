@@ -147,14 +147,8 @@ for (let i = 0; i < 6; i++) {
     let top = document.createElement("div");
     top.classList.add("top");
 
-
-    let image = document.createElement("div");
-    image.classList.add("image");
-
     let img = document.createElement("img");
     img.src = `images/team-0${i + 1}.png`;
-
-    image.appendChild(img);
 
     let social = document.createElement("div");
     social.classList.add("social");
@@ -207,7 +201,7 @@ link4.appendChild(youtubeIcon)
     p.innerHTML = "Simple Short Description";
 
     card.appendChild(top);
-    top.appendChild(image);
+    top.appendChild(img);
     top.appendChild(social);
     card.appendChild(bottom);
     card.appendChild(bottom);
