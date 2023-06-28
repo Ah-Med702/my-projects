@@ -1,58 +1,46 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
-body {
-    margin: 0;
-}
-
-.header h1 {
-    width: 100%;
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    letter-spacing: 2px;
-    font-size: 48px;
-    margin-bottom: 0;
-}
-
-.header h3 {
-    font-family: "Lato", sans-serif;
-    font-weight: 200;
-    letter-spacing: 1px;
-    font-size: 38px;
-    color: rgba(255, 255, 255, 0.9);
-    margin-top: 0;
-}
-
-.header {
-    position: relative;
-    text-align: center;
-    background: linear-gradient(60deg,
-            rgba(84, 58, 183, 1) 0%,
-            rgba(0, 172, 193, 1) 100%);
-    color: white;
-}
-
-.header .fa-nutritionix {
-    width: 50px;
-    fill: white;
-    padding-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.inner-header {
-    height: 65vh;
-    width: 100%;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.flex {
-    /*Flexbox for containers*/
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.header {
+    background: linear-gradient(60deg,
+            #543ab7 0%,
+            #00acc1 100%);
+    color: #fff;
+}
+
+.head {
+    height: 65vh;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+}
+
+.header h1,
+.header h3 {
     text-align: center;
+}
+
+.header h1 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 48px;
+}
+
+.header h3 {
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 38px;
+    color: #ffffffe6;
 }
 
 .waves {
@@ -60,16 +48,8 @@ body {
     width: 100%;
     height: 15vh;
     margin-bottom: -7px;
-    /*Fix for safari gap*/
     min-height: 100px;
     max-height: 150px;
-}
-
-.content {
-    position: relative;
-    height: 20vh;
-    text-align: center;
-    background-color: white;
 }
 
 /* Animation */
@@ -111,63 +91,59 @@ body {
 /* ===================================================================== */
 
 .space {
-    height: 200px;
+    height: 100px;
     width: 100%;
 }
 
 /* ===================================================================== */
 
 .websites {
-    width: 90%;
-    min-height: 100vh;
+    width: 100%;
     padding: 0 4rem;
 }
 
-.websites .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.websites .container h1 {
-    font-family: "Lato", sans-serif;
+.websites h1 {
     font-weight: 500;
     letter-spacing: 1px;
     font-size: 48px;
-    color: #000;
     width: 100%;
     text-align: center;
+    margin-bottom: 50px;
 }
 
+.websites .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
 .websites .container .div {
-    width: 23rem;
-    height: 10rem;
-    margin: 1rem;
+    height: 180px;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
+    border: 4px solid #e9e9e9;
+    box-shadow: 0 5px 20px #dbdbdb;
 }
 
 img {
-    opacity: 1;
-    display: block;
     width: 100%;
-    height: auto;
+    height: calc(100% + 67px);
     transition: .5s ease;
-    backface-visibility: hidden;
-    position: relative;
-    bottom: 1.9rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .middle {
-    transition: .5s ease;
     opacity: 0;
+    width: 100%;
     text-align: center;
-    position: relative;
-    top: -85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s ease;
 }
 
 .websites .container .div:hover img {
@@ -181,8 +157,7 @@ img {
 .text {
     background-color: #1194bf;
     color: white;
-    padding: 1rem 2rem;
-    font-family: "Lato", sans-serif;
+    padding-block: 1rem;
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -193,90 +168,68 @@ a {
     cursor: pointer;
 }
 
-/* ===================================================================== */
-
-
-/*Shrinking for mobile*/
-@media only screen and (min-width:481px) and (max-width:768px) {
-    .waves {
-        height: 40px;
-        min-height: 40px;
+@media (max-width: 992px) {
+    .websites .container {
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    .content {
-        height: 30vh;
-    }
-
-    .header h1 {
-        font-size: 28px;
-    }
-
-    .header h3 {
-        font-size: 20px;
-        margin-bottom: 100px;
-    }
-
-    #details {
-        width: 500px;
-        font-size: 22px;
-    }
-
-    /* ===================================== */
-
-    .websites {
-        padding: 1rem;
-    }
-
-    .websites .container h1 {
-        font-weight: 400;
-        font-size: 32px;
-    }
-
 }
 
-@media screen and (max-width: 480px) {
-
-
-    .content {
-        height: 30vh;
+@media (max-width: 767px) {
+    .websites .container {
+        grid-template-columns: repeat(1, 400px);
+        justify-content: center;
     }
 
     .header h1 {
-        font-size: 20px;
+        letter-spacing: 1px;
+        font-size: 38px;
     }
 
     .header h3 {
-        font-size: 16px;
-        margin-bottom: 120px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        letter-spacing: 1px;
+        font-size: 30px;
     }
 
-    /* ===================================== */
+    .header h3 {
+        font-size: 20px;
+    }
+}
 
-    .websites {
-        padding: 1rem;
+@media (max-width: 500px) {
+    .header h1 {
+        letter-spacing: 1px;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 20px;
     }
 
-    .websites .container h1 {
-        font-weight: 400;
-        font-size: 26px;
+    .header h3 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .websites .container {
+        grid-template-columns: repeat(1, 300px);
+        justify-content: center;
     }
 
     .websites .container .div {
-        width: 18rem;
-        height: 8rem;
-        border-radius: 10px;
+        height: 150px;
     }
 
-    img {
-        bottom: 1.4rem;
+    .websites .container .div img {
+        height: calc(100% + 54px);
     }
 
-    .middle {
-        top: -80%;
-    }
-
-    .text {
-        font-size: 1rem;
-        font-weight: 600;
-    }
+        .websites h1 {
+            font-weight: 600;
+            font-size: 38px;
+        }
 }
+
