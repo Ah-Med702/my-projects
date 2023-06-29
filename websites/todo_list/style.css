@@ -1,16 +1,12 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html,
-body {
-    min-height: 100%;
-    width: 100%;
-}
-
 .todo-list {
-    padding: 40px;
+    width: 80%;
+    margin: 50px auto;
 }
 
 .input-field {
@@ -55,15 +51,15 @@ body {
 }
 
 .item{
-    background-color: #068fff;
-    border-radius: 10px;
-    margin: 20px 0;
     padding: 20px;
+background-color: #d3d1d1;    border-radius: 10px;
+    margin: 20px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #ffffff;
-    font: 1.2em bold sans-serif;
+    font: 20px bold sans-serif;
+    
 }
 
 .del {

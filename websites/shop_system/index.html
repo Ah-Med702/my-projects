@@ -26,7 +26,7 @@
                 <input onkeyup="setTotal()" class="col me-2" type="number" placeholder="price" id="price">
                 <input onkeyup="setTotal()" class="col me-2" type="number" placeholder="taxes" id="taxes">
                 <input onkeyup="setTotal()" class="col me-2" type="number" placeholder="discount" id="discount">
-                <div class="col-lg-1 col-md-2 col-sm-3 p-0">
+                <div class="col p-0">
                     <p class="m-0 py-2 px-2 rounded" id="total"></p>
                 </div>
             </div>
@@ -43,38 +43,35 @@
             <div class="row w-100 mx-0 my-2">
                 <button onclick="setSearch(this.id)" class="btn bg-dark-subtle col me-1" id="titleSearch">search by
                     title</button>
-                <button onclick="setSearch(this.id)" class="btn bg-dark-subtle col ms-1" id="categorySearch">search by
+                <button onclick="setSearch(this.id)" class="btn bg-dark-subtle col ms-1" id="categorySearch">search
+                    by
                     category</button>
                 <button onclick="deleteAll()" class="btn bg-dark-subtle w-100  mt-4" id="deleteAllBtn"></button>
             </div>
         </div>
-        <div class="table"></div>
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>#</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody id="tBody">
+            </tbody>
+        </table>
+        <button class="btn position-fixed btn-secondary" id="scrollBtn"><i class="fa fa-arrow-up"></i></button>
+        <button onclick="changeColorMode()" class="btn position-absolute btn-secondary" id="colorModeBtn">
+            <i id="sun" class="fas fa-sun"></i> <i id="moon" class="fas fa-moon"></i>
+        </button>
+
     </div>
-
-
-    <table class="table">
-        <thead>
-            <tr class="text-center">
-                <th>#</th>
-                <th>title</th>
-                <th>price</th>
-                <th>taxes</th>
-                <th>discount</th>
-                <th>total</th>
-                <th>category</th>
-                <th>update</th>
-                <th>delete</th>
-            </tr>
-        </thead>
-        <tbody id="tBody">
-
-        </tbody>
-    </table>
-
-    <button class="btn position-fixed btn-secondary" id="scrollBtn"><i class="fa fa-arrow-up"></i></button>
-    <button onclick="changeColorMode()" class="btn position-absolute btn-secondary" id="colorModeBtn">
-        <i id="sun" class="fas fa-sun"></i> <i id="moon" class="fas fa-moon"></i>
-    </button>
 
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

@@ -127,6 +127,24 @@ body {
     box-shadow: 0 5px 20px #dbdbdb;
 }
 
+.websites .container .div.note{
+    position: relative;
+}
+
+.websites .container .div.note::before{
+    content: 'only pc or laptop';
+    height: 30px;
+    background-color: #ff000080;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+    color: #fff;
+    font-weight: bold;
+    z-index: 2;
+}
+
 img {
     width: 100%;
     height: calc(100% + 67px);

@@ -3,18 +3,10 @@
     padding: 0;
 }
 
-html,
-body {
-    height: 100%;
+.top,
+.bottom {
+    width: 100%;
 }
-
-/* button {
-    background: #343a40 !important;
-}
-
-button:hover {
-    background: #292e33 !important;
-} */
 
 input {
     height: 40px;
@@ -55,6 +47,12 @@ td {
     justify-content: center;
 }
 
-#sun{
+#sun {
     display: none;
+}
+
+@media (max-width: 767px) {
+    .container {
+        display: none;
+    }
 }

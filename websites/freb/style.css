@@ -232,15 +232,52 @@
     left: 12px;
 }
 
-h2{
+h2 {
     font-family: Arial, Tahoma, sans-serif;
     position: absolute;
-    transform: rotate(-4deg);
     width: 200px;
-    bottom: -100px;
-    left: -180px;
+    top: 20px;
+    left: 20px;
 }
 
-h2 span{
+h2 span {
     color: green;
+}
+
+@media(max-width:767px) {
+    .container {
+        width: 350px;
+        height: 350px;
+    }
+
+    .head{
+        height: 250px;
+    }
+}
+@media(max-width:480px) {
+    .container {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .head{
+        height: 230px;
+    }
+    .nose{
+        height: 60px;
+    }
+
+    .lip1{
+        top: 120px;
+    }
+    .lip2{
+        top: 140px;
+    }
+    .heart{
+        left: -80px;
+    }
+    h2{
+        font-size: 16px;
+    }
 }

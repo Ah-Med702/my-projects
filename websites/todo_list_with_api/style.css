@@ -83,3 +83,23 @@ body {
 .shown-field .done{
     background-color: #00DFA2;
 }
+
+
+@media(max-width: 600px){
+    .container{
+        width: 400px;
+    }
+}
+@media(max-width: 450px){
+    .container{
+        width: 300px;
+    }
+}
+@media(max-width: 350px){
+    .container{
+        width: 250px;
+    }
+    #add-btn{
+        padding: 10px 0;
+    }
+}

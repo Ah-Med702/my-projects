@@ -1,16 +1,17 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
+    width: 100%;
     background-color: #282828;
     font-family: Arial, Tahoma, sans-serif;
     color: white;
 }
 
-.container{
+.container {
     width: 400px;
     height: 400px;
     background-color: #282828;
@@ -19,7 +20,7 @@ body{
     position: relative;
 }
 
-.back{
+.back {
     width: 300px;
     height: 300px;
     background-color: #282828;
@@ -30,12 +31,12 @@ body{
     transform: translate(-50%, -50%);
     border: 7px solid #282828;
     box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
-            inset 4px 4px 10px rgba(0, 0, 0, 0.5),
-            inset -4px -4px 10px rgba(67, 67, 67, 0.5),
-            4px 4px 10px rgba(0, 0, 0, 0.3);
+        inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 10px rgba(67, 67, 67, 0.5),
+        4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.hour{
+.hour {
     width: 6px;
     height: 100%;
     position: absolute;
@@ -43,7 +44,7 @@ body{
     z-index: 10;
 }
 
-.hour::after{
+.hour::after {
     content: '';
     width: 6px;
     height: 90px;
@@ -89,7 +90,7 @@ body{
     border-radius: 10px;
 }
 
-.front{
+.front {
     width: 10px;
     height: 10px;
     background-color: #4d4b63;
@@ -100,48 +101,54 @@ body{
     transform: translate(-50%, -50%);
     z-index: 100;
 }
-.tw{
+
+.tw {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 25%);
 }
-.th{
+
+.th {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translate(-50%, -50%);
 }
-.si{
+
+.si {
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translate(-50%, -25%);
 }
-.ni{
+
+.ni {
     position: absolute;
     top: 50%;
     transform: translate(50%, -50%);
 }
 
-.line-1{
+.line-1 {
     width: 100%;
     height: 5px;
     background-color: #32ff9f;
     position: absolute;
     top: 50%;
-    transform: 
-    translateY(-50%);
+    transform:
+        translateY(-50%);
 }
-.line-2{
+
+.line-2 {
     height: 100%;
     width: 5px;
     background-color: #32ff9f;
     position: absolute;
     left: 50%;
-    transform: 
-    translateX(-50%);
+    transform:
+        translateX(-50%);
 }
-.line-3{
+
+.line-3 {
     height: 100%;
     width: 4px;
     background-color: #929292;
@@ -150,7 +157,8 @@ body{
     top: 50%;
     transform: translate(-50%, -50%) rotate(30deg);
 }
-.line-4{
+
+.line-4 {
     height: 100%;
     width: 4px;
     background-color: #929292;
@@ -159,7 +167,8 @@ body{
     top: 50%;
     transform: translate(-50%, -50%) rotate(60deg);
 }
-.line-5{
+
+.line-5 {
     height: 100%;
     width: 4px;
     background-color: #929292;
@@ -168,7 +177,8 @@ body{
     top: 50%;
     transform: translate(-50%, -50%) rotate(120deg);
 }
-.line-6{
+
+.line-6 {
     height: 100%;
     width: 4px;
     background-color: #929292;
@@ -178,7 +188,7 @@ body{
     transform: translate(-50%, -50%) rotate(150deg);
 }
 
-.isolate{
+.isolate {
     width: 80%;
     height: 80%;
     border-radius: 50%;
@@ -188,4 +198,16 @@ body{
     background-color: #282828;
     transform: translate(-50%, -50%);
 
+}
+
+@media(max-width:600px) {
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .back {
+        width: 250px;
+        height: 250px;
+    }
 }
