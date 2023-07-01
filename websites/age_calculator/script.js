@@ -75,6 +75,10 @@ function findError() {
         daySpan.style.color = "#ff5757";
         monthSpan.style.color = "#ff5757";
         yearSpan.style.color = "#ff5757";
+
+        daySpan.innerHTML = "--";
+        monthSpan.innerHTML = "--";
+        yearSpan.innerHTML = "--";
     }
 
     if (dayInput.value == "") {
@@ -87,6 +91,10 @@ function findError() {
         daySpan.style.color = "#ff5757";
         monthSpan.style.color = "#ff5757";
         yearSpan.style.color = "#ff5757";
+        
+        daySpan.innerHTML = "--";
+        monthSpan.innerHTML = "--";
+        yearSpan.innerHTML = "--";
     }
 
     if (monthInput.value > 12 || monthInput.value == 0) {
@@ -99,6 +107,10 @@ function findError() {
         daySpan.style.color = "#ff5757";
         monthSpan.style.color = "#ff5757";
         yearSpan.style.color = "#ff5757";
+        
+        daySpan.innerHTML = "--";
+        monthSpan.innerHTML = "--";
+        yearSpan.innerHTML = "--";
     }
 
     if (monthInput.value == "") {
@@ -111,6 +123,10 @@ function findError() {
         daySpan.style.color = "#ff5757";
         monthSpan.style.color = "#ff5757";
         yearSpan.style.color = "#ff5757";
+        
+        daySpan.innerHTML = "--";
+        monthSpan.innerHTML = "--";
+        yearSpan.innerHTML = "--";
     }
 
     if (yearInput.value > date.getFullYear()) {
@@ -123,6 +139,10 @@ function findError() {
         daySpan.style.color = "#ff5757";
         monthSpan.style.color = "#ff5757";
         yearSpan.style.color = "#ff5757";
+        
+        daySpan.innerHTML = "--";
+        monthSpan.innerHTML = "--";
+        yearSpan.innerHTML = "--";
     }
 
     if (
@@ -234,6 +254,10 @@ function findError() {
         daySpan.style.color = "#ff5757";
         monthSpan.style.color = "#ff5757";
         yearSpan.style.color = "#ff5757";
+        
+        daySpan.innerHTML = "--";
+        monthSpan.innerHTML = "--";
+        yearSpan.innerHTML = "--";
     }
 
     if (yearInput.value == "") {
@@ -246,6 +270,10 @@ function findError() {
         daySpan.style.color = "#ff5757";
         monthSpan.style.color = "#ff5757";
         yearSpan.style.color = "#ff5757";
+        
+        daySpan.innerHTML = "--";
+        monthSpan.innerHTML = "--";
+        yearSpan.innerHTML = "--";
     }
 }
 
