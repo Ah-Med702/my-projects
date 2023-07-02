@@ -120,7 +120,7 @@
   position: relative;
   width: 200px;
   height: 200px;
-  bottom: 220px;
+  bottom: 150px;
   animation: rotate 60s linear infinite;
   z-index: 1;
 }
@@ -168,7 +168,7 @@
 .leg {
   position: absolute;
   width: 10px;
-  height: 300px;
+  height: 250px;
   border-radius: 10px;
   background-color: green;
 }
@@ -221,59 +221,4 @@
   bottom: 0;
   left: 0;
   z-index: 2;
-}
-
-.grass:before {
-  content: '';
-  position: absolute;
-  bottom: 97%;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 50px 50vw;
-  border-color: transparent transparent #8BC34A transparent;
-  border-top-right-radius: 10px;
-}
-
-.grass:after {
-  content: '';
-  position: absolute;
-  bottom: 95%;
-  right: -80px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 60vw 50px 0;
-  border-color: transparent #8BC34A #8BC34A transparent;
-  border-top-left-radius: 8px;
-}
-
-
-@media (min-width: 1200px){
-  .grass:after{
-    right: -140px;
-  }
-}
-
-@media (max-width: 992px){
-  .grass:after {
-      bottom: 98%;
-    right: -70px;
-  }
-}
-@media (max-width: 767px){
-  .grass:after {
-    right: -50px;
-  }
-}
-@media (max-width: 550px){
-  .grass:after {
-    right: -30px;
-  }
-}
-@media (max-width: 350px){
-  .grass:after {
-    right: -20px;
-  }
 }

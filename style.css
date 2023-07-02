@@ -226,12 +226,10 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-
 }
 
-
 .websites .container .div {
-    height: 180px;
+    height: 95%;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -259,11 +257,8 @@ body {
 
 img {
     width: 100%;
-    height: calc(100% + 67px);
+    height: 100%;
     transition: .5s ease;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .middle {
@@ -305,11 +300,6 @@ a {
 }
 
 @media (max-width: 767px) {
-    .websites .container {
-        grid-template-columns: repeat(1, 400px);
-        justify-content: center;
-    }
-
     .header h1 {
         letter-spacing: 1px;
         font-size: 38px;
@@ -321,6 +311,14 @@ a {
 }
 
 @media (max-width: 600px) {
+    .websites .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .websites .container .div {
+        height: 100%;
+    }
+
     .header h1 {
         letter-spacing: 1px;
         font-size: 30px;
@@ -344,21 +342,21 @@ a {
         font-weight: 600;
     }
 
-    .websites .container {
-        grid-template-columns: repeat(1, 300px);
-        justify-content: center;
-    }
-
-    .websites .container .div {
-        height: 150px;
-    }
-
-    .websites .container .div img {
-        height: calc(100% + 54px);
-    }
-
     .websites h1 {
         font-weight: 600;
-        font-size: 38px;
+        font-size: 28px;
     }
+}
+
+@media (max-width: 300px) {
+    .websites{
+        padding: 2rem;
+    }
+    .websites .container .div {
+        height: 110%;
+    }
+        .websites h1 {
+            font-weight: 600;
+            font-size: 22px;
+        }
 }
